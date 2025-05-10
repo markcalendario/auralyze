@@ -1,4 +1,4 @@
-import Home from "@/pages/Home/Home.jsx";
+import HomePage from "@/pages/Home/Home.jsx";
 import "@/styles/main.scss";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
@@ -9,7 +9,7 @@ function App() {
         <Route
           index
           path="/"
-          element={<Home />}
+          element={<HomePage />}
         />
       </Routes>
     </BrowserRouter>
