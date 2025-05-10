@@ -1,0 +1,27 @@
+@use "../abstracts/colors.scss" as colors;
+@use "../utils/mixins-text-sizes.scss" as textSizes;
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+}
+
+p,
+a {
+  color: colors.$slate-7;
+  @include textSizes.text-sm;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: colors.$slate-8;
+}
+
+a {
+  text-decoration: none;
+  color: colors.$primary;
+}

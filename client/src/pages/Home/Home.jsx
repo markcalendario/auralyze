@@ -1,3 +1,10 @@
+import { Fragment } from "react";
+import Navbar from "../../components/Navbar/Navbar.jsx";
+
 export default function Home() {
-  return <div>Home</div>;
+  return (
+    <Fragment>
+      <Navbar />
+    </Fragment>
+  );
 }
