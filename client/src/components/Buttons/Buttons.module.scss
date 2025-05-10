@@ -1,4 +1,5 @@
 @use "../../styles/abstracts/colors" as colors;
+@use "../../styles/utils/mixins-text-sizes" as textSizes;
 
 .button {
   cursor: pointer;
@@ -17,6 +18,8 @@
   outline: none;
 
   transition: all 0.1s ease;
+
+  @include textSizes.text-sm;
 
   &:hover {
     filter: brightness(90%);

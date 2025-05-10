@@ -1,6 +1,7 @@
+import { Link } from "react-router-dom";
 import styles from "./Buttons.module.scss";
 
-export default function Button({ className, onClick, children }) {
+export function Button({ className, onClick, children }) {
   const classes = [styles.button, className].filter(Boolean).join(" ");
 
   return (
@@ -9,5 +10,18 @@ export default function Button({ className, onClick, children }) {
       onClick={onClick}>
       {children}
     </button>
+  );
+}
+
+export function LinkButton({ className, to, target, children }) {
+  const classes = [styles.button, className].filter(Boolean).join(" ");
+
+  return (
+    <Link
+      to={to}
+      target={target}
+      className={classes}>
+      {children}
+    </Link>
   );
 }
