@@ -1,0 +1,28 @@
+@use "../../styles/abstracts/colors" as colors;
+@use "../../styles/utils/mixins-text-sizes" as textSizes;
+
+.button {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 7px;
+
+  padding: 10px 20px;
+  font-weight: bold;
+  color: colors.$slate;
+  background-color: colors.$primary;
+
+  border: 1px solid rgba(colors.$slate, 0.3);
+  border-radius: 3px;
+  outline: none;
+
+  transition: all 0.1s ease;
+
+  @include textSizes.text-sm;
+
+  &:hover {
+    filter: brightness(90%);
+    transform: scale(0.99);
+  }
+}

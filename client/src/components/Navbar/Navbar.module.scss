@@ -3,6 +3,11 @@
 @use "../../styles/utils/mixins-responsive" as responsive;
 
 .navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+
   .container {
     @include responsive.container;
 

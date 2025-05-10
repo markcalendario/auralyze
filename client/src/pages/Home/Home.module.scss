@@ -1,0 +1,57 @@
+@use "../../styles/abstracts/colors" as colors;
+@use "../../styles/utils/mixins-screens" as screens;
+@use "../../styles/utils/mixins-text-sizes" as textSizes;
+@use "../../styles/utils/mixins-responsive" as responsive;
+
+.home {
+  background-image: url("/assets/images/wallpapers/home.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+
+  .container {
+    height: 100%;
+    @include responsive.container;
+
+    .wrapper {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 25px;
+
+      .texts {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        h1 {
+          font-weight: 900;
+          color: colors.$slate;
+          @include textSizes.text-5xl;
+        }
+
+        p {
+          color: colors.$slate-1;
+          @include textSizes.text-lg;
+        }
+      }
+    }
+  }
+}
+
+@include screens.tabletAndDesktop {
+  .home {
+    .container {
+      .wrapper {
+        .texts {
+          h1 {
+            @include textSizes.text-7xl;
+          }
+        }
+      }
+    }
+  }
+}
