@@ -1,0 +1,57 @@
+@use "../../styles/abstracts/colors" as colors;
+@use "../../styles/utils/mixins-screens" as screens;
+@use "../../styles/utils/mixins-text-sizes" as textSizes;
+@use "../../styles/utils/mixins-responsive" as responsive;
+
+.auralyze {
+  padding: 100px 0;
+  background-image: url("/assets/images/wallpapers/auralyze.jpg");
+  background-size: cover;
+  background-position: bottom;
+  min-height: 100vh;
+
+  .container {
+    @include responsive.container;
+
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+
+      .resultArea {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .transcript,
+        .summary {
+          h1 {
+            color: colors.$primary;
+            @include textSizes.text-lg;
+          }
+
+          textarea {
+            margin-top: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include screens.tabletAndDesktop {
+  .auralyze {
+    .container {
+      .wrapper {
+        .resultArea {
+          flex-direction: row;
+
+          .transcript,
+          .summary {
+            width: calc(100% / 2 - 20px * 1);
+          }
+        }
+      }
+    }
+  }
+}
