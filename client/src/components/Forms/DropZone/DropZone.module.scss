@@ -1,0 +1,46 @@
+@use "../../../styles/abstracts/colors" as colors;
+@use "../../../styles/utils/mixins-text-sizes" as textSizes;
+
+.dropZone {
+  cursor: pointer;
+  padding: 20px 40px;
+  border-radius: 7px;
+  background-color: rgba($color: colors.$primary, $alpha: 0.2);
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+
+  &:hover,
+  &.dragOver {
+    outline: 1px colors.$primary dashed;
+  }
+
+  &.dragOver {
+    background-color: rgba($color: colors.$primary, $alpha: 0.5);
+  }
+
+  .icon {
+    background-color: colors.$primary;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    color: colors.$slate;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include textSizes.text-2xl;
+  }
+
+  p {
+    font-weight: bold;
+    color: colors.$primary;
+  }
+
+  input {
+    display: none;
+  }
+}
