@@ -22,7 +22,7 @@ function Home() {
             <h1>From Audio to Insight</h1>
             <p>Turn spoken audio into smart, concise summaries using AI.</p>
           </div>
-          <LinkButton to="/start">
+          <LinkButton to="/auralyze">
             Summarize Audio
             <FaArrowRight />
           </LinkButton>
