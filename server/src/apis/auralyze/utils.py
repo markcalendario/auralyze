@@ -49,7 +49,7 @@ def transcribe(audio_file_path):
 def summarize(text):
   print(f"[SUMMARIZATION]: Started.")
   summarizer = pipeline("summarization", model="facebook/bart-large-cnn")
-  summary = summarizer(text, max_length=60, min_length=20, do_sample=False)
+  summary = summarizer(text, min_length=20, do_sample=False)
   print(f"[SUMMARIZATION]: Finished.")
 
   return summary[0]["summary_text"]
