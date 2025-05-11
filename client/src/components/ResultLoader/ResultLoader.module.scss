@@ -1,0 +1,35 @@
+@use "../../styles/abstracts/colors" as colors;
+@use "../../styles/utils/mixins-text-sizes" as textSizes;
+
+.loader {
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+
+  img {
+    width: 100px;
+    animation: loader 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite;
+    transform-style: preserve-3d;
+  }
+
+  p {
+    margin-top: 10px;
+    font-weight: 900;
+    color: colors.$primary;
+    @include textSizes.text-xl;
+  }
+}
+
+@keyframes loader {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
