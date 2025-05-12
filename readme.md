@@ -59,7 +59,7 @@ npm run dev
 cd server
 
 # Set environment to development
-SET env=dev
+SET ENV=dev
 
 # Install dependencies
 pip install -r requirements.txt
