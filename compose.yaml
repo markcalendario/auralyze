@@ -1,0 +1,19 @@
+services:
+  client:
+    build: "./client"
+    ports:
+      - "5173:5173"
+    depends_on:
+      - server
+
+  server:
+    build: "./server"
+    ports:
+      - "8000:8000"
+    volumes:
+      - auralyze_uploads:/app/uploads
+    environment:
+      - ENV=production
+
+volumes:
+  auralyze_uploads:
