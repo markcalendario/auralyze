@@ -2,7 +2,13 @@ import { useState } from "react";
 import { FaCloudArrowUp } from "react-icons/fa6";
 import styles from "./DropZone.module.scss";
 
-export default function DropZone({ id, className, onChange, accept }) {
+export default function DropZone({
+  id,
+  className,
+  onChange,
+  accept,
+  disabled
+}) {
   if (!id) throw new Error("ID for drop zone is required.");
 
   const [fileName, setFileName] = useState(null);
@@ -60,6 +66,7 @@ export default function DropZone({ id, className, onChange, accept }) {
         type="file"
         accept={accept}
         onChange={handleFileSelect}
+        disabled={disabled}
       />
     </label>
   );
