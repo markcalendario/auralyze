@@ -8,10 +8,9 @@
   border-radius: 3px;
   border: 2px rgba($color: colors.$primary, $alpha: 0.3) solid;
   outline: 0;
-  background-color: rgba($color: colors.$primary, $alpha: 0.05);
+  background-color: rgba($color: colors.$primary, $alpha: 0.1);
 
   &:disabled {
-    background-color: colors.$slate-1;
     border: 1px rgba($color: colors.$primary, $alpha: 0.3) solid;
   }
 }
