@@ -11,6 +11,7 @@ export default function AudioPlayer({ audioFile }) {
 
     const url = URL.createObjectURL(audioFile);
     audioRef.current = new Audio(url);
+    setIsPlaying(true);
 
     // Cleanup when component unmounts
     return () => {
