@@ -3,8 +3,10 @@
 
 .loader {
   width: 100%;
-  padding: 20px;
+  padding: 50px;
   text-align: center;
+  background-color: colors.$slate-1;
+  border-radius: 3px;
 
   img {
     width: 100px;
