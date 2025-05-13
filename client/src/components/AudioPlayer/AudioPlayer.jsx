@@ -35,7 +35,7 @@ export default function AudioPlayer({ audioFile }) {
       onClick={handleToggleAudio}
       className={styles.audioPlayer}>
       <img
-        className={isPlaying && styles.playing}
+        className={isPlaying ? styles.playing : undefined}
         src="/assets/images/logo/auralyze.png"
         alt={isPlaying ? "pause button" : "play button"}
       />
