@@ -4,35 +4,35 @@
 @use "../../styles/utils/mixins-responsive" as responsive;
 
 .auralyze {
-  padding: 100px 0;
-  background-image: url("/assets/images/wallpapers/auralyze.jpg");
-  background-size: cover;
-  background-position: bottom;
-  min-height: 100vh;
+  padding: 90px 0;
 
   .container {
     @include responsive.container;
 
     .wrapper {
       display: flex;
-      flex-direction: column;
-      gap: 30px;
+      flex-direction: column-reverse;
+      gap: 50px;
 
-      .resultArea {
+      .result {
         display: flex;
         flex-direction: column;
-        gap: 20px;
+        gap: 10px;
 
-        .transcript,
-        .summary {
-          h1 {
-            color: colors.$primary;
-            @include textSizes.text-lg;
-          }
+        h1 {
+          color: colors.$primary;
+          @include textSizes.text-lg;
+        }
+      }
 
-          textarea {
-            margin-top: 10px;
-          }
+      .audio {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        .title {
+          color: colors.$primary;
+          @include textSizes.text-lg;
         }
       }
     }
@@ -43,13 +43,12 @@
   .auralyze {
     .container {
       .wrapper {
-        .resultArea {
-          flex-direction: row;
+        flex-direction: row;
+        align-items: flex-start;
 
-          .transcript,
-          .summary {
-            width: calc(100% / 2 - 20px * 1);
-          }
+        .audio,
+        .result {
+          width: 100%;
         }
       }
     }
