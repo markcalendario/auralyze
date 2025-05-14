@@ -1,6 +1,6 @@
 # 🎧 Auralyze
 
-**Auralyze** is a web-based AI tool that transcribes and summarizes spoken audio using advanced speech recognition and natural language processing. Upload or drop audio files to get clean, concise summaries of conversations, meetings, and voice notes.
+**Auralyze** is a web-based AI tool that transcribes and summarizes spoken audio using advanced speech recognition and natural language processing. Upload or drop audio files to get clean, concise summaries of conversations, meetings, and voice notes. **This is an introductory project to NLP.**
 
 ---
 
